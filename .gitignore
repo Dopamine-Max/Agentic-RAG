@@ -1,5 +1,6 @@
 .env
 .venv/
 images/
+test_files/
 __pycache__/
 poetry.lock
