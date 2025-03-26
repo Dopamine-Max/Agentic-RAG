@@ -14,7 +14,7 @@ BOT_AVATAR = "https://img.icons8.com/?size=100&id=102660&format=png&color=000000
 
 def display_welcome():
     """Interactive welcome message with expandable help"""
-    with st.expander("🚀 **Welcome to Smart Doc Analyzer!**", expanded=True):
+    with st.expander("🚀 **Welcome to Smart File-Analyzer!**", expanded=True):
         st.markdown("""
         **How to use:**
         1. 📤 Upload files in sidebar

@@ -1,4 +1,4 @@
-# Smart Document Analyzer
+# Smart File-Analyzer
 
 Multi-modal AI-powered document analysis system with support for numerous file types.
 
