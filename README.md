@@ -10,7 +10,7 @@ Multi-modal AI-powered document analysis system with support for numerous file t
 - 🧠 Context-aware conversations
 
 ## Installation
-1. Install [Python 3.11^](https://www.python.org/downloads/) [Ollama](https://ollama.com/download/windows) and [Poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
+1. Install [Python 3.11^](https://www.python.org/downloads/), [Ollama](https://ollama.com/download/windows) and [Poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
 2. Setup Accounts on [Qdrant](https://qdrant.tech), [Groq](https://groq.com), [Ngrok](https://ngrok.com)    
 3. Clone repo:
    ```bash
