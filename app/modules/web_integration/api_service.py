@@ -5,13 +5,7 @@ from crawler import crawl_parallel
 import asyncio
 import uvicorn
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Initialize per-app state here
-    yield
-    # Cleanup after all requests
-    
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
 class SearchRequest(BaseModel):
     query: str

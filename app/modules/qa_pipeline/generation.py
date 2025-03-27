@@ -44,7 +44,6 @@ def generate_response(query: str, context: List[Dict],
                 "2. Use ONLY provided context\n"
                 "3. NEVER invent beyond context\n"
                 "4. ALWAYS CITE sources using [Source: ]\n"
-                "Example: 'According to [Source Name]...'"
             )
         }]
 
@@ -69,6 +68,16 @@ def generate_response(query: str, context: List[Dict],
             temperature=0.5,
             stream=True
         )
+        
+        # # TEMPORARY CONTEXT DISPLAY
+        # import streamlit as st  # Add at top for production use
+        # with st.expander("🔍 RAW CONTEXT (DEBUG)", expanded=False):
+        #     st.markdown("### Retrieved Context Chunks")
+        #     if context_str:
+        #         st.markdown(messages)
+        #     else:
+        #         st.warning("No context available for this query")
+        #     st.markdown("---")
 
         for chunk in response:
             if chunk.choices[0].delta.content:

@@ -12,25 +12,25 @@ def get_urls(query: str) -> List[str]:
     
      Args:
         query: Search string to find relevant web pages
-        num_results: Number of search results to return (default: 20)
+        num_results: Number of search results to return (default: 10)
         advanced: Flag to enable advanced search features (default: True)
 
     Returns:
-        List of filtered URLs (max 5) that match the criteria:
+        List of filtered URLs (max 3) that match the criteria:
         - Start with http:// or https://
         
     """
     try:
         results = search(
             query,
-            num_results=20,
+            num_results=10,
             advanced=True,
         )
         return [
             result.url for result in results 
             if result.url.startswith(('http://', 'https://'))
             # and not result.url.endswith(('.pdf', '.doc', '.docx'))
-        ][:5]
+        ][:3]
     except Exception as e:
         print(f"Search failed: {str(e)}")
         return []
