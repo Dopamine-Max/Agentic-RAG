@@ -1,6 +1,6 @@
 import asyncio
 from googlesearch import search
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Optional
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from crawl4ai.content_filter_strategy import BM25ContentFilter
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator

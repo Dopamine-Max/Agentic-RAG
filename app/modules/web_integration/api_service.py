@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from crawler import crawl_parallel
 import asyncio

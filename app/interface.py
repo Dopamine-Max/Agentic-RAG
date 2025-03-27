@@ -277,11 +277,21 @@ def main():
                     )
                     final_response = handle_streaming_response(response_stream)
                         
+                    # Parse sources from response
+                    sources = []
+                    if "[Source:" in final_response:
+                        source_parts = final_response.split("[Source:")[1:]
+                        for part in source_parts:
+                            source = part.split("]")[0].strip()
+                            if source not in sources:
+                                sources.append(source)
+                    
                     
                     # Store message with metadata
                     st.session_state.messages.append({
                         "role": "assistant",
                         "content": final_response,
+                        "sources": sources,
                         "avatar": BOT_AVATAR  
                     })
                 
