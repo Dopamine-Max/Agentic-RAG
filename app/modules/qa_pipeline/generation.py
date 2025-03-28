@@ -38,12 +38,13 @@ def generate_response(query: str, context: List[Dict],
         messages = [{
             "role": "system",
             "content": (
-                "You are an analytical assistant synthesizing information from provided sources. "
+                "You are an analytical assistant synthesizing information from provided sources. Ensure you follow the rules!\n"
                 "Rules:\n"
-                "1. Maintain RELEVANCE with user query \n"
-                "2. Use ONLY provided context\n"
+                "1. Maintain RELEVANCE with USER QUERY \n"
+                "2. Use ONLY provided Document Context\n"
                 "3. NEVER invent beyond context\n"
                 "4. ALWAYS CITE sources using [Source: ]\n"
+                "5. Maintain CONVERSATION FLOW from Chat History\n"
             )
         }]
 
@@ -54,6 +55,7 @@ def generate_response(query: str, context: List[Dict],
             })
 
         if chat_history:
+            messages.append({"role": "system", "content": "Chat History:"})
             messages.extend([
                 {"role": msg["role"], "content": msg["content"]}
                 for msg in chat_history
