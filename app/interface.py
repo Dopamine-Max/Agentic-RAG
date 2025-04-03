@@ -26,9 +26,7 @@ def display_welcome():
         - 🎤 Audio recordings  
         - 🖼️ Images  
         """)
-        st.divider()
-        st.caption("Tip: Use voice input with the 🎤 button!")
-
+        
 def file_processor(uploaded_files: List) -> None:
     """Robust file processing with enhanced error handling"""
     try:
