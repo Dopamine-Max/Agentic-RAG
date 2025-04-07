@@ -14,8 +14,8 @@ Multi-modal AI-powered document analysis system with support for numerous file t
 2. Setup Accounts on [Qdrant](https://qdrant.tech), [Groq](https://groq.com), [Ngrok](https://ngrok.com)    
 3. Clone repo:
    ```bash
-   git clone https://github.com/Dopamine-Max/smart-file-analyzer.git
-   cd smart-file-analyzer
+   git clone https://github.com/Dopamine-Max/Agentic-RAG.git
+   cd Agentic-RAG
    ```
 4. Setup the dependencies:
     ```bash
