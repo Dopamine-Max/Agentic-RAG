@@ -19,12 +19,12 @@ Multi-modal AI-powered document analysis system with support for numerous file t
    ```
 4. Setup the dependencies:
     ```bash
-    poetry install
+    poetry install --no-root
     poetry run pip install git+https://github.com/openai/whisper.git@v20231117
     ```
 5. Setup a virtual environment (venv) to run the project
     ```bash
-    poetry env use python3
+    poetry env use python
     ```
 5. Run the kaggle/colab notebook (.ipynb file) to get ngrok link
 6. Run the file api_service.py (current issue requires restart of API after each search)
